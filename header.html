@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="js/header.js"></script>
 
 </head>
 
@@ -67,46 +69,46 @@
     </header>
     
     <script>
-        $(document).ready(function (e) {
-            
-            function t(t) {
+        // $(document).ready(function (e) {
 
-                e(t).bind("click", function (t) {
-                    t.preventDefault();
-                    e(this).parent().fadeOut();
-                });
-            }
+        //     function t(t) {
 
-            e(".dropdown-toggle").click(function () {
+        //         e(t).bind("click", function (t) {
+        //             t.preventDefault();
+        //             e(this).parent().fadeOut();
+        //         });
+        //     }
 
-                var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
-                e(".button-dropdown .dropdown-menu").hide();
-                e(".button-dropdown .dropdown-toggle").removeClass("active");
-                if (t) {
-                    e(this)
-                        .parents(".button-dropdown")
-                        .children(".dropdown-menu")
-                        .toggle()
-                        .parents(".button-dropdown")
-                        .children(".dropdown-toggle")
-                        .addClass("active");
-                }
-            });
+        //     e(".dropdown-toggle").click(function () {
 
-            e(document).bind("click", function (t) {
+        //         var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
+        //         e(".button-dropdown .dropdown-menu").hide();
+        //         e(".button-dropdown .dropdown-toggle").removeClass("active");
+        //         if (t) {
+        //             e(this)
+        //                 .parents(".button-dropdown")
+        //                 .children(".dropdown-menu")
+        //                 .toggle()
+        //                 .parents(".button-dropdown")
+        //                 .children(".dropdown-toggle")
+        //                 .addClass("active");
+        //         }
+        //     });
 
-                var n = e(t.target);
-                if (!n.parents().hasClass("button-dropdown"))
-                    e(".button-dropdown .dropdown-menu").hide();
-            });
+        //     e(document).bind("click", function (t) {
 
-            e(document).bind("click", function (t) {
-                var n = e(t.target);
-                if (!n.parents().hasClass("button-dropdown"))
-                    e(".button-dropdown .dropdown-toggle").removeClass("active");
-            });
+        //         var n = e(t.target);
+        //         if (!n.parents().hasClass("button-dropdown"))
+        //             e(".button-dropdown .dropdown-menu").hide();
+        //     });
 
-        });
+        //     e(document).bind("click", function (t) {
+        //         var n = e(t.target);
+        //         if (!n.parents().hasClass("button-dropdown"))
+        //             e(".button-dropdown .dropdown-toggle").removeClass("active");
+        //     });
+
+        // });
     </script>
 </body>
 
