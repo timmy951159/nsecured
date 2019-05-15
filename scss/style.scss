@@ -368,6 +368,12 @@ img {
     height: 400px;
 }
 
+.bg-13 {
+    background: url("/img/policy-banner.jpg") center no-repeat;
+    background-size: cover;
+    height: 400px;
+}
+
 .site-banner {
     width: 100%;
     display: flex;
@@ -1021,6 +1027,29 @@ img {
 
     &:nth-child(3) {
         border: none;
+    }
+}
+
+.textbox {
+
+    h2.textbox-title {
+        font-weight: 900;
+        font-size: 24px;
+        color: #F05B5B;
+        margin-bottom: 50px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 900;
+        color: #F05B5B;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+
+    p , ul , li {
+        font-size: 14px;
+        color: #555;
     }
 }
 
