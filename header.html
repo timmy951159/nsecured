@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="main-header-container">
+            <a href="/" class="logo">
+                <img src="img/Home_LOGO_Red.png" alt="" />
+            </a>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="button-dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle">COMPANY</a>
+                        <ul class="nav-sub-menu dropdown-menu">
+                            <li>
+                                <a href="/index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="/about-us.html">About Us</a>
+                            </li>
+                            <li>
+                                <a href="/value.html">Our Value</a>
+                            </li>
+                            <li>
+                                <a href="/career.html">Career</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="button-dropdown">
+                        <a href="javascript:void(0);" class="dropdown-toggle">SOLUTION</a>
+                        <ul class="nav-sub-menu dropdown-menu">
+                            <li>
+                                <a href="/fido.html">Biometrics Solution - FIDO</a>
+                            </li>
+                            <li>
+                                <a href="/facial-recognition.html">Biometrics Solution - Facial Recognition</a>
+                            </li>
+                            <li>
+                                <a href="/data-security.html">Biometrics Solution - Data Security</a>
+                            </li>
+                            <li>
+                                <a href="/tokenization.html">Tokenization</a>
+                            </li>
+                            <li>
+                                <a href="/gdpr.html">GDPR</a>
+                            </li>
+                            <li>
+                                <a href="/data-masking.html">Data Masking</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="button-dropdown">
+                        <a href="contact.html" class="dropdown-toggle">CONTACT US</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <script>
+        $(document).ready(function (e) {
+            
+            function t(t) {
+
+                e(t).bind("click", function (t) {
+                    t.preventDefault();
+                    e(this).parent().fadeOut();
+                });
+            }
+
+            e(".dropdown-toggle").click(function () {
+
+                var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
+                e(".button-dropdown .dropdown-menu").hide();
+                e(".button-dropdown .dropdown-toggle").removeClass("active");
+                if (t) {
+                    e(this)
+                        .parents(".button-dropdown")
+                        .children(".dropdown-menu")
+                        .toggle()
+                        .parents(".button-dropdown")
+                        .children(".dropdown-toggle")
+                        .addClass("active");
+                }
+            });
+
+            e(document).bind("click", function (t) {
+
+                var n = e(t.target);
+                if (!n.parents().hasClass("button-dropdown"))
+                    e(".button-dropdown .dropdown-menu").hide();
+            });
+
+            e(document).bind("click", function (t) {
+                var n = e(t.target);
+                if (!n.parents().hasClass("button-dropdown"))
+                    e(".button-dropdown .dropdown-toggle").removeClass("active");
+            });
+
+        });
+    </script>
+</body>
+
+</html>
