@@ -19,9 +19,14 @@
 </head>
 
 <body>
+
+    <div class="loader">
+        <img src="img/NS_TaiPay_Group_Open_&_End_test.gif" alt="">
+    </div>
+
     <div class="main-header-box">
         <div id="header"></div>
-        
+
         <div class="site-banner bg-1">
             <div class="site-banner-title-box">
                 <h1 class="site-head" data-in-effect="fadeIn">NSecured</h1>
@@ -187,7 +192,20 @@
     <script src="js/header.js"></script>
     <!-- <script src="js/header.js"></script> -->
     <script>
-        $(function(){
+        window.addEventListener('load', function () {
+
+            setTimeout(() => {
+                const loader = document.querySelector('.loader');
+                loader.className += ' hidden';
+            }, 3500);
+
+
+        })
+
+        $(function () {
+
+
+
 
             //測試用ajax
             // const xhr = new XMLHttpRequest();
@@ -215,22 +233,23 @@
             // };
 
             //正式上線ajax
-            $('#header').load('header.html');
-            $('#footer').load('footer.html');
+            // $('#header').load('header.html');
+            // $('#footer').load('footer.html');
+
 
             AOS.init();
 
 
-            
 
-            
+
+
 
         });
 
         // $(document).ready(function(e) {
 
         // function t(t) {
-                
+
         //         e(t).bind("click", function (t) {
         //             t.preventDefault();
         //             e(this).parent().fadeOut();
@@ -238,7 +257,7 @@
         //     }
 
         //     e(".dropdown-toggle").click(function () {
-                
+
         //         var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
         //         e(".button-dropdown .dropdown-menu").hide();
         //         e(".button-dropdown .dropdown-toggle").removeClass("active");
@@ -254,7 +273,7 @@
         //     });
 
         //     e(document).bind("click", function (t) {
-                
+
         //         var n = e(t.target);
         //         if (!n.parents().hasClass("button-dropdown"))
         //             e(".button-dropdown .dropdown-menu").hide();
