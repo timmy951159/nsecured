@@ -318,85 +318,12 @@ GDPR requires organizations or companies and other groups who are processing per
     <script>
         $(document).ready(function () {
 
-            //測試用ajax
-            const xhr = new XMLHttpRequest();
-            xhr.open("GET", "header.html", true);
-            xhr.send();
-
-            xhr.onreadystatechange = function () {
-                if (xhr.readyState == 4 && xhr.status == 200) {
-
-                    document.querySelectorAll("#header")[0].innerHTML = xhr.responseText;
-
-                }
-            };
-
-            const xhr2 = new XMLHttpRequest();
-            xhr2.open("GET", "footer.html", true);
-            xhr2.send();
-
-            xhr2.onreadystatechange = function () {
-                if (xhr2.readyState == 4 && xhr2.status == 200) {
-
-                    document.querySelectorAll("#footer")[0].innerHTML = xhr2.responseText;
-
-                }
-            };
-
-            //正式上線ajax
-            // $('#header').load('header.html');
-            // $('#footer').load('footer.html');
+            $('#header').load('header.html');
+            $('#footer').load('footer.html');
 
             AOS.init();
 
-
-
-
-
-
         });
-
-        $(document).ready(function (e) {
-
-            function t(t) {
-
-                e(t).bind("click", function (t) {
-                    t.preventDefault();
-                    e(this).parent().fadeOut();
-                });
-            }
-
-            e(".dropdown-toggle").click(function () {
-
-                var t = e(this).parents(".button-dropdown").children(".dropdown-menu").is(":hidden");
-                e(".button-dropdown .dropdown-menu").hide();
-                e(".button-dropdown .dropdown-toggle").removeClass("active");
-                if (t) {
-                    e(this)
-                        .parents(".button-dropdown")
-                        .children(".dropdown-menu")
-                        .toggle()
-                        .parents(".button-dropdown")
-                        .children(".dropdown-toggle")
-                        .addClass("active");
-                }
-            });
-
-            e(document).bind("click", function (t) {
-
-                var n = e(t.target);
-                if (!n.parents().hasClass("button-dropdown"))
-                    e(".button-dropdown .dropdown-menu").hide();
-            });
-
-            e(document).bind("click", function (t) {
-                var n = e(t.target);
-                if (!n.parents().hasClass("button-dropdown"))
-                    e(".button-dropdown .dropdown-toggle").removeClass("active");
-            });
-
-        });
-
 
         $(".site-head").textillate({
             loop: false,

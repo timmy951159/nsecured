@@ -1,6 +1,7 @@
 $(document).ready(function(e) {
 
-    
+    console.log('header loading...');
+
     function t(t) {
         e(t).bind("click", function (t) {
             t.preventDefault();
@@ -40,6 +41,6 @@ $(document).ready(function(e) {
             e(".button-dropdown .dropdown-toggle").removeClass("active");
     });
 
-
+ console.log('header success!')
 
 });

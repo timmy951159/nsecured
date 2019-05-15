@@ -165,46 +165,12 @@
     <script>
         $(document).ready(function () {
 
-            //測試用ajax
-            // const xhr = new XMLHttpRequest();
-            // xhr.open("GET", "header.html", true);
-            // xhr.send();
-
-            // xhr.onreadystatechange = function () {
-            //     if (xhr.readyState == 4 && xhr.status == 200) {
-
-            //         document.querySelectorAll("#header")[0].innerHTML = xhr.responseText;
-
-            //     }
-            // };
-
-            // const xhr2 = new XMLHttpRequest();
-            // xhr2.open("GET", "footer.html", true);
-            // xhr2.send();
-
-            // xhr2.onreadystatechange = function () {
-            //     if (xhr2.readyState == 4 && xhr2.status == 200) {
-
-            //         document.querySelectorAll("#footer")[0].innerHTML = xhr2.responseText;
-
-            //     }
-            // };
-
-            //正式上線ajax
             $('#header').load('header.html');
             $('#footer').load('footer.html');
 
             AOS.init();
 
-
-
-
-
-
         });
-
-        
-
 
         $(".site-head").textillate({
             loop: false,
