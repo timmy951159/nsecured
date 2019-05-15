@@ -1,9 +1,11 @@
 $title-color:#333;
 $para-color:#555;
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 /***reset.css***/
 html,
 body,
@@ -357,13 +359,13 @@ img {
 .bg-11 {
     background: url("/img/NSECURED_DataMasking-03.png") center no-repeat;
     background-size: cover;
-    height: 400px; 
+    height: 400px;
 }
 
 .bg-12 {
     background: url("/img/contact-us-banner.jpg") center no-repeat;
     background-size: cover;
-    height: 400px; 
+    height: 400px;
 }
 
 .site-banner {
@@ -400,7 +402,8 @@ img {
 
 .block-white,
 .block-gray,
-.block-blue {
+.block-blue,
+.block-dark {
     padding: 70px 0;
 }
 
@@ -415,6 +418,10 @@ img {
 .block-blue {
     background-color: #324F73;
     position: relative;
+}
+
+.block-dark {
+    background-color: #595757;
 }
 
 .title {
@@ -543,7 +550,7 @@ img {
 }
 
 .site-footer {
-    background-color: #595757;
+    background-color: #3d3d3d;
     padding: 30px 0;
 
     .site-footer__box {
@@ -581,6 +588,10 @@ img {
                 i {
                     font-size: 16px;
                 }
+            }
+
+            :hover {
+                opacity: 0.8;
             }
         }
     }
@@ -930,7 +941,8 @@ img {
             width: 50%;
             margin-bottom: 20px;
 
-            th,td {
+            th,
+            td {
                 border: none;
                 text-align: left;
                 width: 100%;
@@ -940,18 +952,18 @@ img {
                 color: #555;
             }
 
-            th {
-
-            }
+            th {}
 
             td {
-                
-                input , textarea , select {
+
+                input,
+                textarea,
+                select {
                     width: 100%;
                     border: none;
                     border-radius: 5px;
                     padding: 10px 10px;
-                    border: 1px solid rgba(0,0,0,0.1);
+                    border: 1px solid rgba(0, 0, 0, 0.1);
                 }
             }
         }
@@ -977,8 +989,45 @@ img {
     }
 }
 
+.download-block {
+    align-items: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    padding: 25px;
+    border-radius: 5px;
+
+    .download-title {
+        color: #fff;
+
+        span {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+    }
+
+    .download-pic {
+        text-align: center;
+
+        i {
+            color: #F05B5B;
+            font-size: 30px;
+        }
+
+        a:hover {
+            opacity: 0.8;
+        }
+    }
+
+    &:nth-child(3) {
+        border: none;
+    }
+}
+
+
+
 @media (max-width:768px) {
-    
+
     .main-header-box .main-header .main-header-container {
         widows: 100%;
     }
