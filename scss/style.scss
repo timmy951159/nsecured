@@ -1076,6 +1076,7 @@ img {
 .loader.hidden {
     animation: fadeOut 1s;
     animation-fill-mode: forwards;
+    
 }
 
 @keyframes fadeOut {
@@ -1083,6 +1084,7 @@ img {
     100% {
         opacity: 0;
         visibility: hidden;
+        display: none;
     }
 
 }
