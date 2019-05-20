@@ -1,5 +1,6 @@
 $(document).ready(function(e) {
 
+
     console.log('header loading...');
 
     function t(t) {
@@ -41,6 +42,13 @@ $(document).ready(function(e) {
             e(".button-dropdown .dropdown-toggle").removeClass("active");
     });
 
- console.log('header success!')
+ console.log('header success!');
+
+
+});
+
+$(".hamber-toggle").click(function() {
+    $(this).toggleClass("open");
+    $('nav').toggleClass('opened');
 
 });
